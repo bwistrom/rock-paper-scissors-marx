@@ -1,0 +1,24 @@
+<div class="App">
+  <header class="app-header">
+    <h1>🎮 Rock, Paper, Scissors Game</h1>
+  </header>
+  <ng-container *ngIf="view === 'login'">
+    <app-login (onLogin)="handleLogin($event)"></app-login>
+  </ng-container>
+  <ng-container *ngIf="view === 'game'">
+    <app-game
+      [username]="user"
+      [currentScore]="currentScore"
+      [highScore]="highScore"
+      [matchHistory]="matchHistory"
+      (gameResult)="handleGameResult($event)"
+      (logout)="handleLogout()"
+      (showLeaderboard)="handleShowLeaderboard()"
+      (updateMatchHistory)="updateMatchHistory($event)"
+    ></app-game>
+  </ng-container>
+  <ng-container *ngIf="view === 'leaderboard'">
+    <app-leaderboard></app-leaderboard>
+    <button class="btn-back" (click)="view = 'game'">Back to Game</button>
+  </ng-container>
+</div>

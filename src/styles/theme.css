@@ -1,0 +1,127 @@
+/* Dark Mode Theme Variables */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f5f5f5;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --border-color: rgba(102, 126, 234, 0.1);
+  --shadow-light: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --accent-primary: #667eea;
+  --accent-secondary: #764ba2;
+}
+
+:root.dark-mode {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #252525;
+  --bg-tertiary: #303030;
+  --text-primary: #e8e8e8;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #808080;
+  --border-color: rgba(102, 126, 234, 0.2);
+  --shadow-light: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Apply theme colors throughout */
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.App {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.game-container,
+.score-board,
+.game-area,
+.history-section,
+.login-container {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-light);
+}
+
+.score-board,
+.game-area,
+.history-section {
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
+}
+
+.player-info h3,
+.choice-section h2,
+.history-section h3,
+.move-text,
+.result-text {
+  color: var(--text-primary);
+}
+
+.username,
+.score-value {
+  color: var(--accent-primary);
+}
+
+.score-label,
+.move p,
+.vs-text,
+.history-time {
+  color: var(--text-secondary);
+}
+
+.btn-choice {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+}
+
+.move {
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+  border-color: var(--border-color);
+}
+
+.history-item {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+:root.dark-mode .history-item {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.login-container .login-box,
+.login-box form input {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.login-box h2,
+.login-box label {
+  color: var(--text-primary);
+}
+
+.info-text {
+  color: var(--text-tertiary);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button,
+input {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

@@ -1,0 +1,99 @@
+<div class="game-container">
+  <div class="score-board">
+    <div class="player-info">
+      <h3>Welcome, <span class="username">{{ username }}</span>!</h3>
+      <div class="score-display">
+        <div class="score-item">
+          <p class="score-label">Current Score</p>
+          <p class="score-value">{{ currentScore }}</p>
+        </div>
+        <div class="score-item">
+          <p class="score-label">High Score</p>
+          <p class="score-value">{{ highScore }}</p>
+        </div>
+      </div>
+    </div>
+    <button class="btn-logout" (click)="handleLogout()">
+      Logout
+    </button>
+    <button class="btn-leaderboard" (click)="handleShowLeaderboard()">
+      🏆 Leaderboard
+    </button>
+  </div>
+
+  <div class="game-area">
+    <ng-container *ngIf="!gameActive">
+      <div class="choice-section">
+        <h2>Choose your move:</h2>
+        <div class="choices">
+          <button
+            *ngFor="let choice of choices"
+            class="btn-choice"
+            (click)="handlePlay(choice)"
+            [title]="choice"
+          >
+            <span class="emoji">{{ getEmoji(choice) }}</span>
+            <span class="choice-label">{{ choice | titlecase }}</span>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="gameActive">
+      <div class="result-section">
+        <div class="moves-display">
+          <div class="move you">
+            <p>You chose:</p>
+            <div class="move-emoji">{{ getEmoji(playerChoice || '') }}</div>
+            <p class="move-text">{{ playerChoice }}</p>
+          </div>
+
+          <div class="vs">VS</div>
+
+          <div class="move cpu">
+            <p>CPU chose:</p>
+            <div class="move-emoji">{{ getEmoji(cpuChoice || '') }}</div>
+            <p class="move-text">{{ cpuChoice }}</p>
+          </div>
+        </div>
+
+        <div [ngClass]="['result', result]">
+          <ng-container *ngIf="result === 'win'">
+            <h2>🎉 You Win!</h2>
+            <p>+1 points</p>
+          </ng-container>
+          <ng-container *ngIf="result === 'lose'">
+            <h2>😞 You Lose</h2>
+            <p>-1 points</p>
+          </ng-container>
+          <ng-container *ngIf="result === 'draw'">
+            <h2>🤝 It's a Draw</h2>
+            <p>+0 points</p>
+          </ng-container>
+        </div>
+
+        <button class="btn-play-again" (click)="handlePlayAgain()">
+          Play Again
+        </button>
+      </div>
+    </ng-container>
+  </div>
+
+  <div *ngIf="matchHistory.length > 0" class="history-section">
+    <h3>📋 Last 10 Rounds</h3>
+    <div class="history-list">
+      <div *ngFor="let match of matchHistory" [ngClass]="['history-item', match.result]">
+        <div class="history-moves">
+          <span>{{ getEmoji(match.playerChoice) }}</span>
+          <span class="vs-text">vs</span>
+          <span>{{ getEmoji(match.cpuChoice) }}</span>
+        </div>
+        <div class="history-result">
+          <span class="result-text">{{ match.result | uppercase }}</span>
+          <span class="points">{{ match.points > 0 ? '+' : '' }}{{ match.points }}</span>
+        </div>
+        <div class="history-time">{{ match.timestamp }}</div>
+      </div>
+    </div>
+  </div>
+</div>

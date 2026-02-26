@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "jest"
+    ],
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "rootDir": "."
+  },
+  "files": [
+    "src/components/game.component.spec.ts",
+    "src/components/login.component.spec.ts",
+    "src/shared/services/game-logic.service.spec.ts"
+  ],
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ]
+}

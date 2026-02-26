@@ -55,7 +55,7 @@ This project demonstrates advanced Angular development practices including:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/bwistrom/rock-paper-scissors-marx.git
+   git clone https://github.com/your-username/rock-paper-scissors-angular.git
    cd rock-paper-scissors-angular
    ```
 
@@ -400,7 +400,7 @@ Firebase credentials are stored in `src/environments/environment.ts` and `enviro
 
 ## 📄 License
 
-This project is licensed under Marx´s License + AI Contribution
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
