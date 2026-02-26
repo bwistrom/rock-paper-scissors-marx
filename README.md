@@ -400,7 +400,7 @@ Firebase credentials are stored in `src/environments/environment.ts` and `enviro
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Marx´s License +  "MIT" - AI Contribution
 
 ## 👨‍💻 Author
 
@@ -412,4 +412,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Author:** Marx Björn Wiström  
 **Date:** February 2026
+
 
