@@ -55,7 +55,7 @@ This project demonstrates advanced Angular development practices including:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/rock-paper-scissors-angular.git
+   git clone https://github.com/bwistrom/rock-paper-scissors-marx.git
    cd rock-paper-scissors-angular
    ```
 
@@ -412,5 +412,6 @@ This project is licensed under the Marx´s License +  "MIT" - AI Contribution
 
 **Author:** Marx Björn Wiström  
 **Date:** February 2026
+
 
 
