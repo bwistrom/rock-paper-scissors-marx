@@ -118,7 +118,6 @@ Check that your Firebase config in `src/firebase.js` is correct
 
 ## 📚 Additional Resources
 
-- [CONVERSION_GUIDE.md](./CONVERSION_GUIDE.md) - Detailed React to Angular conversion info
 - [README.md](./README.md) - Full project documentation
 - [Angular Documentation](https://angular.io/docs)
 
@@ -135,3 +134,5 @@ Check that your Firebase config in `src/firebase.js` is correct
 ---
 
 **Enjoy the game! // Marx🎮**
+
+PS. My personal firebase credentials is included in order for the leaderboard should be collaborative so please don´t ruin this feature . DS 
