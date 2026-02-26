@@ -135,4 +135,5 @@ Check that your Firebase config in `src/firebase.js` is correct
 
 **Enjoy the game! // Marx🎮**
 
-PS. My personal firebase credentials is included in order for the leaderboard should be collaborative so please don´t ruin this feature . DS 
+PS. My personal firebase sh1zzle is included in order for the leaderboard to be collaborative so please don´t ruin this feature . DS 
+
